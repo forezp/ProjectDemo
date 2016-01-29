@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#000000" >
+
+        <ImageButton
+            android:id="@+id/id_iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:onClick="showLeftMenu"
+            android:background="@drawable/showright_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="222"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/id_iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+             android:onClick="showRightMenu"
+            android:background="@drawable/showleft_selector" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+    
+     <LinearLayout
+        android:id="@+id/console_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/main_tab_group"
+            style="@style/AppTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/botton_main"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/main_tab_home"
+                style="@style/main_tab_bottom"
+                android:background="@color/botton_ratiobutton"
+                android:checked="true"
+                android:drawableTop="@drawable/rb_weather_home"
+                android:text="@string/menu1" />
+
+            <RadioButton
+                android:id="@+id/main_tab_expressage"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/rb_weather_product"
+                android:text="@string/menu2" />
+
+            <RadioButton
+                android:id="@+id/main_tab_community"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/rb_weather_life"
+                android:text="@string/menu3" />
+            
+            <RadioButton
+                android:id="@+id/main_tab_shopping"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/rb_weather_life"
+                android:text="@string/menu4" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>
